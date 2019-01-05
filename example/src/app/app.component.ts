@@ -25,16 +25,12 @@ constructor(private routingSignalService: RoutingSignalService) { }
 
    onRoute(e) {
         if(e){
-           this.elementToFocusAfterRouting.nativeElement.textContent = "Top of " + e.target.innerText;
-           this.elementToFocusAfterRouting.nativeElement.blur();
-					 setTimeout(()=>{this.elementToFocusAfterRouting.nativeElement.focus();}, 500);
 					this.setCurrentRouterLink(e.target.innerText); 
         }
    }
 
  setCurrentRouterLink(componentName) {
-    //Set aria-current
-    //Reset aria-current on all router links first
+
       this.ariaCurrent1 = null;
       this.ariaCurrent2 = null;
       this.ariaCurrent3 = null;
