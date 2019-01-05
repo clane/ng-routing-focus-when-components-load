@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-component3',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Component3Component implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {}
+  componentTitle = 'Component 3';
+  setTitle(newTitle:string) { this.titleService.setTitle(newTitle); }
+  @ViewChild('componentHeading') elementToFocusOnInit;
 
   ngOnInit() {
+    this.setTitle(this.componentTitle);
+    this.elementToFocusOnInit.nativeElement.focus();
   }
 
 }
