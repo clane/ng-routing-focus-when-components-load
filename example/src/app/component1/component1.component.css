@@ -1,4 +1,8 @@
 
+*:focus {
+    outline: #00f dotted 3px;
+}
+
 .cat {
     width: 150px;
     height: 150px;

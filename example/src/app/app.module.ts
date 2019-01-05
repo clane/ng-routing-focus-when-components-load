@@ -7,6 +7,7 @@ import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 import { Component3Component } from './component3/component3.component';
 import { Component4Component } from './component4/component4.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { Component4Component } from './component4/component4.component';
     Component1Component,
     Component2Component,
     Component3Component,
-    Component4Component
+    Component4Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,7 @@ import { Component4Component } from './component4/component4.component';
     {
       //A default path is required to prevent routing errors
       path:'',
-      component: Component1Component,
+      component: HomeComponent,
 
     },
     {
