@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { RoutingSignalService } from './routing-signal.service';
 import { AppComponent } from './app.component';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
@@ -47,7 +46,7 @@ import { HomeComponent } from './home/home.component';
     },
   ])
   ],
-	providers: [RoutingSignalService],
+	providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
